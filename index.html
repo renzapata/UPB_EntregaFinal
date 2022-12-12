@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--====== CSS ======-->
+<link rel="stylesheet" href="./css/main.css">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LoginRegistro</title>
+</head>
+
+<body>
+
+<!--====== FRM LOGIN ======-->
+  <form action="" id="frm_login" class="needs-validation" novalidate>
+    <h5>Registrarse</h5>
+    <label class="form-label" for="correo">
+   Usuario:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="email" class="form-control" id="correo" placeholder="Ingrese su correo" required>
+      <div class="invalid-feedback">
+        Ingresa un correo valido
+      </div>
+    </label><br><br>
+    <label class="form-label" for="clave">
+      Contraseña:
+      <input type="password" class="form-control" id="clave" placeholder="Ingrese su contraseña" required>
+      <div class="invalid-feedback">
+        Verifica tu contraseña
+      </div>
+    </label><br>
+    <div>
+      <a href="javascript:void();" id="btn_ir_a_registro">No estoy registrado</a>&nbsp;&nbsp;
+      <input type="submit" id="btn_enviar" class="btn btn-primary" value="Enviar">
+    </div>
+  </form>
+
+
+<!--====== FRM REGISTRO ======-->
+  <form action="" class="needs-validation ocultar" id="frm_registro" novalidate>
+      <section class="primera_parte">
+        <h5>Registro</h5>
+        <label class="form-label" for="nombre">
+          Nombre
+          <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" required>
+          <div class="invalid-feedback">
+            Ingresa un nombre valido
+          </div>
+        </label>
+        <br>
+        <label for="apellido" class="form-label">
+          Apellido
+          <input type="text" id="apellido" class="form-control" placeholder="Ingrese su apellido" required>
+          <div class="invalid-feedback">
+            Ingresa un apellido valido
+          </div>
+        </label><br>
+        <label class="form-label" for="celular">
+          Celular
+          <input type="text" class="form-control" id="celular" placeholder="Ingrese su celular" required>
+          <div class="invalid-feedback">
+            Ingresa un celular correcto
+          </div>
+        </label><br>
+        <label class="form-label" for="direccion">
+          Dirección
+          <textarea name="" class="form-control" id="direccion" cols="20" rows="3" maxlength="50" required></textarea>
+          <div class="invalid-feedback">
+            Completa la dirección
+          </div>
+        </label><br>
+      </section>
+      <section class="segunda_parte">
+        <label class="form-label" for="correo">
+          Correo
+          <input type="email" class="form-control" id="correo1" placeholder="Ingrese su correo" required>
+          <div class="invalid-feedback">
+            Ingresa un correo valido
+          </div>
+        </label><br>
+        <label for="clave" class="form-label">
+          Contraseña
+          <input type="password" class="form-control" id="clave1" placeholder="Ingrese su clave" required>
+          <div class="invalid-feedback">
+            Valida la clave, debe ser igual
+          </div>
+        </label><br>
+        <label for="clave" class="form-label">
+          Confirmar contraseña
+          <input type="password" class="form-control" id="clave2" placeholder="Confirme su clave" required>
+          <div class="invalid-feedback">
+            Valida la clave, debe ser igual
+          </div>
+        </label><br>
+        <input type="submit" class="btn btn-outline-primary" id="btn_enviar_registrar" value="Enviar">
+      </section>
+  </form>
+
+
+
+
+<!--====== FRM ENTRADA ANIMAL ======-->
+  <form id="frm_EntrAnimal" class="ocultar">
+    <h2 class="text-center mt-0 text-uppercase">Entrada animal</h2>
+
+    <div class="notification is-info mt-20 mb-20">
+      <p>no esta almacenando datos</p>
+    </div>
+
+
+    <div class="form-group">
+      <label>Numero<span style="color:#ff0000">*</span></label>
+      <input type="text" id="inp_uname" octavalidate="R,USERNAME" required:msg="Your username is required"
+        ov-username:msg="Please enter a valid username" placeholder="numero" length="5">
+    </div>
+
+    <div class="form-group">
+      <label>Nombre <span style="color:#ff0000">*</span></label>
+      <input type="text" ov-required:msg="Your Email Address is required" id="inp_reg_email"
+        octavalidate="R,EMAIL" placeholder="nombre">
+    </div>
+
+    <div class="form-group">
+      <label>Fecha Nacimiento<span style="color:#ff0000">*</span></label>
+      <input type="date" id="fecha" octavalidate="R,USERNAME" required:msg="fecha requerida"
+        ov-username:msg="Please enter a valid username" placeholder="fecha nacimiento" length="5">
+    </div>
+
+    <div class="form-group">
+      <label for="nToro">Seleccione Toro:</label>
+      <select name="nAnimal" id="nAnimal">
+        <option value="Jedy">Jedy</option>
+        <option value="SHolstein">SHolstein</option>
+        <option value="SGir">SGir</option>
+      </select>
+    </div>
+
+
+    <div class="form-group">
+      <label>Sexo <span style="color:#ff0000">*</span></label>
+      <input type="text" ov-required:msg="sexo del animal" id="asexo" octavalidate="sexo" placeholder="sexo">
+    </div>
+
+    <div class="form-group">
+      <label>Padre</label>
+      <input type="text" id="inp_uname" octavalidate="toro padre" required:msg="toro padre"
+        ov-username:msg="Please enter a valid username" placeholder="Your username" length="5">
+    </div>
+
+    <div class="form-group">
+      <label>Madre </label>
+      <input type="text" ov-required:msg="vaca madre" id="vmadre" octavalidate="R,EMAIL" placeholder="Vaca Madre">
+    </div>
+
+    <div class="form-group">
+      <label>Cargar archivos <span style="color:#ff0000">*</span></label>
+      <input type="file" id="inp_multiple_files" octavalidate="R" minfiles="5" maxsize="10mb"
+        accept-mime="audio/*" multiple>
+    </div>
+
+
+    <div class="mt-100">
+      <input type="checkbox" id="inp_terms" octavalidate="R"
+        ov-required:msg="Verifique la informacion">Informacion verificada
+    </div>
+
+    <div class="form-group">
+      <button class="reg-btn block" type="submit">RUN TEST</button>
+    </div>
+  </form>
+
+    <!--====== Sidebar Menu ppal======-->
+    <div id="menu0" class="sidebar_toggler">
+      <span></span>
+      <span></span>
+      <span></span>
+  </div>
+
+    <aside id="menu1" class="sidebar">
+        <div class="sidebar_content sidebar_head">
+            <h1>SoloGanA2</h1>
+        </div>
+        <div class="sidebar_content sidebar_body">
+            <nav class="side_navlinks">
+                <ul>
+                    <label for="levent">
+                        <li><input class="boton" id="btn_event" type="button" value="Entrada animal"><br>
+                    </label>
+                    <label for="lcontr">
+                        <li><input class="boton" id="btn_ctrl" type="button" value="Controles"><br>
+                    </label>
+                    <li><input class="boton" id="btn_proy" type="button" value="Presupuesto"><br>
+                    <li><input class="boton" id="btn_hato" type="button" value="Hato"><br>
+                    <li><input class="boton" id="btn_otrs" type="button" value="Otros"><br>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+  
+  <section id="home" class="ocultar">
+    <h2>Pagina principal</h2>
+  </section>
+
+  <!--====== JavaScript ======-->
+  <script src="./js/main.js"></script>
+  <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+
+</html>
